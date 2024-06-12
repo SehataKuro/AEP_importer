@@ -1,5 +1,5 @@
 // フォルダのパスを指定
-var folderPath = "D:/VScode/Workspace_AfterEffects/AEP_importer/AEP"
+var folderPath = $.getenv(AEP_importerPath)
 try 
 {
     function replaceLayerComp(fullPath) {
