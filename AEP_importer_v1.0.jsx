@@ -1,5 +1,9 @@
-// フォルダのパスを指定
-var folderPath = $.getenv(AEP_importerPath)
+// フォルダのパスを設定
+var scriptFile = new File($.fileName); // スクリプトファイルのパスを取得
+var scriptFolder = scriptFile.parent; // スクリプトファイルの親フォルダを取得
+var folderPath = scriptFolder.fsName + "/AEP"; // データフォルダのパスを構築
+
+
 try 
 {
     function replaceLayerComp(fullPath) {
