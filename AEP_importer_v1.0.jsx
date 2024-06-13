@@ -103,10 +103,11 @@ try
         outLayer.startTime = selectedLayer.startTime;
 
         // OUTコンポジションをリネーム
-        OUTComp.name = importedProj.name + "_" + selectedLayerName;
+        var importedProjName = importedProj.name;
+        OUTComp.name = importedProjName.replace(".aep","") + "_" + selectedLayerName;
 
         // インポートしたフォルダ名をリネーム
-        importedProj.name = importedProj.name + "_" + selectedLayerName;
+        importedProj.name = importedProjName.replace(".aep","")  + "_" + selectedLayerName;
 
         // 選択したレイヤーを削除する
         selectedLayer.remove();
